@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="login.css" />
+    <title>Login Page Design</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <form>
+          <h1>Create Account</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <input type="text" name="name" placeholder="Enter Name" />
+          <input type="email" name="email" placeholder="Enter Email" />
+          <input type="password" name="password" placeholder="Enter Password" />
+          <button type="submit" class="a" id="signUpBtn">Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in">
+        <form action="login.php" method="post">
+          <h1>Sign In</h1>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter Your Email"
+            required
+          /><br />
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Your Password"
+            required
+          /><br /><br />
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Water-Billing <br />System</h1>
+            <p>
+              Kindly furnish your personal information to unlock a myriad of
+              features.
+            </p>
+            <button class="hidden" id="login">Sign In</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Water-Billing System</h1>
+            <p>
+              Complete your registration with your personal information to
+              unlock access to all features
+            </p>
+            <button class="hidden" id="register">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("register")
+        .addEventListener("click", function () {
+          document.getElementById("container").classList.add("active");
+        });
+
+      document.getElementById("login").addEventListener("click", function () {
+        document.getElementById("container").classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
